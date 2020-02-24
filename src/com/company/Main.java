@@ -91,6 +91,7 @@ class Main
                                 int uanganda = input.nextInt();
                                 int samadengan = uanganda - uang;
                                 MySecondClass.Coba("Kembalian : " + MySecondClass.KonvertString(samadengan));
+                                MySecondClass.Coba("------- Terimakasih Telah Membeli Pizza Di Toko Kami -------");
                                 break;
                             } catch (Exception e)
                             {
