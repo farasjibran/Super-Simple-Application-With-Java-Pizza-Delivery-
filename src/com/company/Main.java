@@ -26,6 +26,7 @@ class Main
                 MySecondClass.Coba("Selamat Datang Di Pizza Apa Adanya");
                 MySecondClass.Coba("Menu Yang Tersedia :");
                 MySecondClass.Coba("------------------------");
+
 //        Untuk Memunculkan Menu
                 for (String[] namamakan : menu)
                     {
@@ -93,9 +94,11 @@ class Main
                                 MySecondClass.Coba("Kembalian : " + MySecondClass.KonvertString(samadengan));
                                 MySecondClass.Coba("------- Terimakasih Telah Membeli Pizza Di Toko Kami -------");
                                 break;
-                            } catch (Exception e)
+                            }
+
+                        catch (Exception e)
                             {
-                                e.printStackTrace();
+                                System.err.println("Error");;
                             }
 
                     }
