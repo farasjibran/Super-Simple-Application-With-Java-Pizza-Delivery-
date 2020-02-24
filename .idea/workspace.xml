@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6112709d-ad7b-4fb2-8ed1-80aec0efea1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="6112709d-ad7b-4fb2-8ed1-80aec0efea1f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,33 +57,56 @@
       <option name="presentableId" value="Default" />
       <updated>1582432209242</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update File 1.5">
+      <created>1582515476821</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582515476821</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update File 1.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update File 1.5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="512" y="248" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582515075879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="512" y="248" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1582515075879" />
-    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1582515447862">
+    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1582515476261">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582515447862" />
-    <state width="1495" height="191" key="GridCell.Tab.0.bottom" timestamp="1582515411637">
+    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582515476261" />
+    <state width="1495" height="191" key="GridCell.Tab.0.bottom" timestamp="1582515515808">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582515411637" />
-    <state width="1495" height="191" key="GridCell.Tab.0.center" timestamp="1582515411637">
+    <state width="1495" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582515515808" />
+    <state width="1495" height="191" key="GridCell.Tab.0.center" timestamp="1582515515808">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582515411637" />
-    <state width="1495" height="191" key="GridCell.Tab.0.left" timestamp="1582515411637">
+    <state width="1495" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582515515808" />
+    <state width="1495" height="191" key="GridCell.Tab.0.left" timestamp="1582515515808">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582515411637" />
-    <state width="1495" height="191" key="GridCell.Tab.0.right" timestamp="1582515411637">
+    <state width="1495" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582515515808" />
+    <state width="1495" height="191" key="GridCell.Tab.0.right" timestamp="1582515515808">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582515411637" />
+    <state width="1495" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582515515808" />
     <state x="432" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1582443964005">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
