@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public
@@ -12,22 +11,23 @@ class Main
             {
                 // write your code here
 
-//        Scanner
+                //        Scanner
                 Scanner input = new Scanner(System.in);
 
-//        List Menu
+                //        List Menu
                 String[][] menu = {
                         {"pizza cheesy bread", "30500"},
                         {"pizza calzone", "33000"},
-                        {"pizza apple strudel", "17000"}
+                        {"pizza apple strudel", "17000"},
+                        {"pizza lasagna", "20000"}
                 };
 
-//        MySecondClass
+                //        MySecondClass
                 MySecondClass.Coba("Selamat Datang Di Pizza Apa Adanya");
                 MySecondClass.Coba("Menu Yang Tersedia :");
                 MySecondClass.Coba("------------------------");
 
-//        Untuk Memunculkan Menu
+                //        Untuk Memunculkan Menu
                 for (String[] namamakan : menu)
                     {
                         for (String menumakan : namamakan)
@@ -36,42 +36,42 @@ class Main
                             }
                         System.out.println();
                     }
-
                 MySecondClass.Coba("------------------------");
 
-//        Looping
+                //                Variable
                 boolean looping = true;
                 boolean info = false;
                 int uang = 0;
+
+                //                Inputan
+                MySecondClass.Coba("Pizza Yang Dipilih : ");
+                String pilihan = input.nextLine().toLowerCase();
+                for (String[] makanan : menu)
+                    {
+                        for (String dimakan : makanan)
+                            {
+                                if (dimakan.equals(pilihan))
+                                    {
+                                        uang = MySecondClass.KonvertInt(makanan[1].trim());
+                                        info = true;
+                                    }
+                            }
+                    }
+
+                //                Loop untuk produk apabila barang tidak tersedia
                 while (looping)
                     {
-
-                        try
+                        if (!info)
                             {
-                                MySecondClass.Coba("Pizza Yang Dipilih : ");
-                                String pilihan = input.nextLine().toLowerCase();
-                                for (String[] makanan : menu)
+                                MySecondClass.Coba("Produk Yang Anda Pilih Tidak Ada");
+                                System.out.println("Apakah anda ingin mencari lagi ? (y/n) ");
+                                String konfirmasi = input.nextLine().toLowerCase();
+                                if (konfirmasi.contains("n"))
                                     {
-                                        for (String dimakan : makanan)
-                                            {
-                                                if (dimakan.equals(pilihan))
-                                                    {
-                                                        uang = MySecondClass.KonvertInt(makanan[1].trim());
-                                                        info = true;
-                                                    }
-                                            }
+                                        looping = false;
                                     }
-
-//                    Apabila produk yang dipilih tidak tersedia
-                                if (!info)
+                                else
                                     {
-                                        MySecondClass.Coba("Produk Yang Anda Pilih Tidak Ada");
-                                        System.out.println("Apakah anda ingin mencari lagi ? (y/n) ");
-                                        String konfirmasi = input.nextLine().toLowerCase();
-                                        if (konfirmasi.contains("n"))
-                                            {
-                                                return;
-                                            }
                                         MySecondClass.Coba("Pizza Yang Dipilih : ");
                                         pilihan = input.nextLine().toLowerCase();
                                         for (String[] makanan : menu)
@@ -80,28 +80,50 @@ class Main
                                                     {
                                                         if (dimakan.equals(pilihan))
                                                             {
-                                                                uang = MySecondClass.KonvertInt(makanan[1]);
+                                                                uang = MySecondClass
+                                                                        .KonvertInt(makanan[1].trim());
                                                                 info = true;
                                                             }
                                                     }
                                             }
                                     }
-
+                            }
+                        else
+                            {
                                 MySecondClass.Coba("Total Harga : " + MySecondClass.KonvertString(uang));
                                 MySecondClass.Coba("Masukkan Uang Anda : ");
                                 int uanganda = input.nextInt();
-                                int samadengan = uanganda - uang;
-                                MySecondClass.Coba("Kembalian : " + MySecondClass.KonvertString(samadengan));
-                                MySecondClass.Coba("------- Terimakasih Telah Membeli Pizza Di Toko Kami -------");
+
+                                //                  Loop apabila uang yang di bayar saat pembayaran kurang
+                                while (looping)
+                                    {
+                                        if (uanganda < uang)
+                                            {
+                                                MySecondClass
+                                                        .Coba("Uang yang anda masukkan kurang. silahkan coba lagi");
+                                                uanganda = input.nextInt();
+                                                if (uanganda == uang)
+                                                    {
+                                                        int totaluang = uanganda - uang;
+                                                        MySecondClass.Coba("Kembalian : " +
+                                                                           MySecondClass.KonvertString(totaluang));
+                                                        MySecondClass
+                                                                .Coba("---- TerimaKasih Telah Berbelanja Di Toko Kami ----");
+                                                        looping = false;
+                                                    }
+                                            }
+                                        else
+                                            {
+                                                int totaluang = uanganda - uang;
+                                                MySecondClass
+                                                        .Coba("Kembalian : " + MySecondClass.KonvertString(totaluang));
+                                                MySecondClass
+                                                        .Coba("---- TerimaKasih Telah Berbelanja Di Toko Kami ----");
+                                                looping = false;
+                                            }
+                                    }
                                 break;
                             }
-
-                        catch (Exception e)
-                            {
-                                System.err.println("Error");;
-                            }
-
                     }
-
             }
     }
