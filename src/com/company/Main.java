@@ -99,8 +99,8 @@ class Main
                                     {
                                         if (uanganda < uang)
                                             {
-                                                MySecondClass
-                                                        .Coba("Uang yang anda masukkan kurang. silahkan coba lagi");
+                                                MySecondClass.Coba("Uang yang anda masukkan kurang. silahkan coba lagi");
+                                                MySecondClass.Coba("Masukkan Uang Anda : ");
                                                 uanganda = input.nextInt();
                                                 if (uanganda == uang)
                                                     {
