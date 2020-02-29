@@ -74,26 +74,29 @@ class Main
                     {
                         if (!info)
                             {
-                                MySecondClass.Error("Produk Yang Anda Pilih Tidak Ada");
-                                System.out.println("Apakah anda ingin mencari lagi ? (y/n) ");
-                                konfirmasi = input.nextLine().toLowerCase();
-                                if (konfirmasi.contains("n"))
+                                while (!info)
                                     {
-                                        looping = false;
-                                    }
-                                else
-                                    {
-                                        MySecondClass.Coba("Pizza Yang Dipilih : ");
-                                        pilihan = input.nextLine().toLowerCase();
-                                        for (String[] makanan : menu)
+                                        MySecondClass.Error("Produk Yang Anda Pilih Tidak Ada");
+                                        System.out.println("Apakah anda ingin mencari lagi ? (y/n) ");
+                                        konfirmasi = input.nextLine().toLowerCase();
+                                        if (konfirmasi.contains("n"))
                                             {
-                                                for (String dimakan : makanan)
+                                                looping = false;
+                                            }
+                                        else
+                                            {
+                                                MySecondClass.Coba("Pizza Yang Dipilih : ");
+                                                pilihan = input.nextLine().toLowerCase();
+                                                for (String[] makanan : menu)
                                                     {
-                                                        if (dimakan.equals(pilihan))
+                                                        for (String dimakan : makanan)
                                                             {
-                                                                uang = MySecondClass
-                                                                        .KonvertInt(makanan[1].trim());
-                                                                info = true;
+                                                                if (dimakan.equals(pilihan))
+                                                                    {
+                                                                        uang = MySecondClass
+                                                                                .KonvertInt(makanan[1].trim());
+                                                                        info = true;
+                                                                    }
                                                             }
                                                     }
                                             }
@@ -104,7 +107,48 @@ class Main
                                 konfirmasi = input.nextLine().toLowerCase();
                                 if (konfirmasi.contains("n"))
                                     {
-                                        looping = false;
+                                        // Apabila pizza tidak ditambahkan topping maka pembayaran seperti berikut
+                                        MySecondClass
+                                                .Coba("Anda telah membeli " + pilihan + " dengan harga " +
+                                                      MySecondClass.KonvertString(uang));
+                                        MySecondClass
+                                                .Coba("Total Harga : " + MySecondClass.KonvertString(uang));
+                                        MySecondClass.Coba("Masukkan Uang Anda : ");
+                                        int uanganda = input.nextInt();
+
+                                        // Loop apabila uang yang di bayar saat pembayaran kurang
+                                        while (looping)
+                                            {
+                                                if (uanganda < uang)
+                                                    {
+                                                        MySecondClass
+                                                                .Coba("Uang yang anda masukkan kurang. silahkan coba lagi");
+                                                        MySecondClass.Coba("Masukkan Uang Anda : ");
+                                                        uanganda = input.nextInt();
+                                                        if (uanganda == uang)
+                                                            {
+                                                                int totaluang = uanganda - uang;
+                                                                MySecondClass.Coba("Kembalian : " +
+                                                                                   MySecondClass
+                                                                                           .KonvertString(
+                                                                                                   totaluang));
+                                                                MySecondClass
+                                                                        .Coba("---- TerimaKasih Telah Berbelanja Di Toko Kami ----");
+                                                                looping = false;
+                                                            }
+                                                    }
+                                                else
+                                                    {
+                                                        int totaluang = uanganda - uang;
+                                                        MySecondClass
+                                                                .Coba("Kembalian : " +
+                                                                      MySecondClass
+                                                                              .KonvertString(totaluang));
+                                                        MySecondClass
+                                                                .Coba("---- TerimaKasih Telah Berbelanja Di Toko Kami ----");
+                                                        looping = false;
+                                                    }
+                                            }
                                     }
                                 else
                                     {
